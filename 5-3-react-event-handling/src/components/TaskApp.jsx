@@ -28,13 +28,16 @@ export default function TaskApp() {
   return (
     <section className="card">
       {/*Controlled Input */}
+
       <div className="inputRow">
         <input
           type="text"
           placeholder="Type a task..."
           className="input"
           // TODO: value={text}
+            value={text}
           // TODO: onChange={(e) => setText(e.target.value)}
+            onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") handleSubmit();
           }}
@@ -43,11 +46,10 @@ export default function TaskApp() {
           Submit
         </button>
       </div>
-
-      {/*Render Task List and Enable Delete */
-          <button onClick={() => onDelete(id)}>Delete</button>}
+        <p>text</p>
+      {/*Render Task List and Enable Delete */}
       {/*Pass tasks and onDelete */}
-      <TaskList /* tasks={tasks} onDelete={handleDelete} */ />
+      <TaskList tasks={tasks} onDelete={handleDelete} />
 
       {/*Clear All */}
       <div className="footerRow">
