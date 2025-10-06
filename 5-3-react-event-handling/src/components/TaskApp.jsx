@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import TaskList from "./TaskList";
 
 export default function TaskApp() {
-  
+  const [text, setText] = useState("");
+  const [tasks, setTasks] = useState([]);
+
   const handleSubmit = () => {
-   
+   if(text.trim() === "")
+   {return ;}
+   const newTask = {id: Date.now(), text};
+   setTasks(prev => [...prev, { id: Date.now(), text }]);
+   setText("");
   };
 
   
