@@ -8,7 +8,6 @@ export default function TaskApp() {
   const handleSubmit = () => {
    if(text.trim() === "")
    {return ;}
-   const newTask = {id: Date.now(), text};
    setTasks(prev => [...prev, { id: Date.now(), text }]);
    setText("");
   };
