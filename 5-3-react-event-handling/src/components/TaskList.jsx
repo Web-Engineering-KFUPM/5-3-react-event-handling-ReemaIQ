@@ -13,7 +13,7 @@ export default function TaskList({ tasks, onDelete }) {
                     <TaskItem
                         key={task.id}
                         id={task.id}
-                        task={task}
+                        text={task.text}
                         onDelete={onDelete}
                     />
                 ))
